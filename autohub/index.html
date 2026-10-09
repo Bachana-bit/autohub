@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUTOHUB — Premium Car Marketplace</title>
+<meta name="description" content="Find verified premium vehicles from trusted dealers.">
+<meta name="theme-color" content="#0e0f11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="header"></header>
+<main id="main">
+<section class="hero"><div class="wrap hero-g"><div><h1>Find the car<span>that moves you.</span></h1><p>Verified vehicles, transparent prices and financing that fits. Browse 39 hand-picked cars from trusted dealers.</p>
+<div class="hero-btns"><a class="btn mag" href="inventory.html">Search inventory</a><a class="btn ghost mag" href="inventory.html?cat=Performance">Browse vehicles</a></div>
+<form class="hero-search" id="heroSearch" role="search"><label class="sr" for="hq" style="position:absolute;left:-999px">Search</label><input id="hq" name="q" placeholder="Brand, model or keyword"><button type="submit">Search</button></form></div>
+<img class="hero-car" src="" alt="Red performance coupe in a showroom" width="800" height="500"></div><div class="scroll-i" aria-hidden="true"></div></section>
+<section class="sec"><div class="wrap"><div class="sec-h rv"><h2>Featured vehicles</h2><a class="btn ghost sm" href="inventory.html">View all</a></div><div class="grid" id="featured"></div></div></section>
+<section class="sec" style="background:var(--bg2)"><div class="wrap"><div class="sec-h rv"><h2>Popular brands</h2><a class="btn ghost sm" href="brands.html">All brands</a></div><div class="chips" id="brandChips"></div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-h rv"><h2>Browse by category</h2></div><div class="chips" id="cats"></div></div></section>
+<section class="sec" style="background:var(--bg2)"><div class="wrap"><div class="sec-h rv"><h2>Why AUTOHUB</h2></div><div class="feat rv">
+<div><b>150</b><h3>Verified vehicles</h3><p>Every car passes a 150-point inspection and history check.</p></div>
+<div><b>0</b><h3>Hidden fees</h3><p>The price you see is the price you pay, taxes listed upfront.</p></div>
+<div><b>72</b><h3>Flexible financing</h3><p>Terms up to 72 months with instant payment estimates.</p></div>
+<div><b>200+</b><h3>Trusted dealers</h3><p>Only rated dealerships with proven customer service.</p></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-h rv"><h2>Latest arrivals</h2><div><button class="ico-btn" data-scroll="-1" aria-label="Previous">‹</button> <button class="ico-btn" data-scroll="1" aria-label="Next">›</button></div></div><div class="car" id="latest" tabindex="0" aria-label="Latest vehicles"></div></div></section>
+<section class="sec cta"><div class="wrap rv"><h2>Your next car is waiting.</h2><a class="btn mag" href="inventory.html">Browse inventory</a><a class="btn ghost mag" href="sell.html">Sell your car</a></div></section></main>
+<footer id="footer"></footer>
+
+<script src="js/vehicles.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

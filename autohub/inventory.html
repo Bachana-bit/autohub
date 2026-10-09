@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventory — AUTOHUB</title>
+<meta name="description" content="Search, filter and sort premium vehicles.">
+<meta name="theme-color" content="#0e0f11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="header"></header>
+<section class="pagehead"><div class="wrap"><h1 style="font-size:clamp(2.6rem,7vw,5rem)">Inventory</h1><p class="lead" style="margin-top:14px">Search and filter every vehicle on AUTOHUB.</p></div></section><main id="main"><div class="wrap inv">
+<form class="filters" id="filters" aria-label="Filters"><button type="button" class="fclose" aria-label="Close filters">×</button><h3 style="margin-bottom:18px">Filters</h3>
+<div class="fg"><label for="brand">Brand</label><select id="brand"></select></div><div class="fg"><label for="model">Model</label><select id="model"></select></div>
+<div class="row2 fg"><div><label for="pmin">Min price</label><input id="pmin" type="number" min="0" step="1000" placeholder="0"></div><div><label for="pmax">Max price</label><input id="pmax" type="number" min="0" step="1000" placeholder="Any"></div></div>
+<div class="fg"><label for="year">Year</label><select id="year"></select></div><div class="fg"><label for="mileage">Max mileage (km)</label><input id="mileage" type="number" min="0" step="1000" placeholder="Any"></div>
+<div class="fg"><label for="fuel">Fuel type</label><select id="fuel"></select></div><div class="fg"><label for="transmission">Transmission</label><select id="transmission"></select></div>
+<div class="fg"><label for="body">Body type</label><select id="body"></select></div><div class="fg"><label for="drive">Drive type</label><select id="drive"></select></div>
+<div class="fg"><label for="model">Engine</label><select id="engineDummy" disabled><option>Use search to find engines</option></select></div>
+<div class="fg"><label for="color">Color</label><select id="color"></select></div><button type="button" class="btn ghost sm" id="reset" style="width:100%">Reset filters</button>
+<div class="fapply"><button type="button" class="btn">Show results</button></div></form>
+<section><div class="searchbar"><label for="q" class="sr" style="position:absolute;left:-999px">Search</label><input id="q" type="search" placeholder="Search brand, model, engine or keyword"></div><div class="pills" id="pills"></div>
+<div class="topbar"><div class="grp"><button class="btn ghost sm fbtn" id="openF">Filters</button><strong id="count" aria-live="polite"></strong></div><div class="grp"><label for="sort" class="sr" style="position:absolute;left:-999px">Sort</label><select id="sort"><option value="newest">Newest</option><option value="pasc">Price: low to high</option><option value="pdesc">Price: high to low</option><option value="masc">Lowest mileage</option></select>
+<div class="tg"><button data-v="grid" aria-label="Grid view">▦</button><button data-v="list" aria-label="List view">☰</button></div></div></div><div><div class="grid" id="results"></div></div></section></div></main>
+<footer id="footer"></footer>
+
+<script src="js/vehicles.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/inventory.js"></script>
+</body>
+</html>

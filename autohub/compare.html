@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare — AUTOHUB</title>
+<meta name="description" content="Compare up to three vehicles.">
+<meta name="theme-color" content="#0e0f11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="header"></header>
+<section class="pagehead"><div class="wrap"><h1 style="font-size:clamp(2.6rem,7vw,5rem)">Compare</h1><p class="lead" style="margin-top:14px">Select up to three vehicles. Best values are highlighted.</p></div></section><main id="main"><div class="wrap" style="padding-bottom:80px"><div class="cmp-pick" id="slots" style="margin-bottom:0"></div><div class="topbar" style="margin-top:20px"><div class="grp" style="flex:1;min-width:240px"><label for="add" class="sr" style="position:absolute;left:-999px">Add vehicle</label><select id="add" style="width:100%"></select></div><button class="btn ghost sm" id="clear" hidden>Clear all</button></div>
+<p class="empty" id="hint">Add at least two vehicles to see the comparison.</p><div id="out" hidden><div class="tw" id="tbl" tabindex="0" role="region" aria-label="Comparison table"></div></div></div></main>
+<footer id="footer"></footer>
+
+<script src="js/vehicles.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/compare.js"></script>
+</body>
+</html>

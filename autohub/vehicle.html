@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vehicle — AUTOHUB</title>
+<meta name="description" content="Vehicle details.">
+<meta name="theme-color" content="#0e0f11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="header"></header>
+<main id="main"><div class="wrap"><div class="vgrid"><div><p style="color:var(--mut);margin-bottom:14px"><a href="inventory.html">Inventory</a> / <span id="crumb"></span></p>
+<div style="position:relative"><div class="gal-main" id="galMain" role="button" tabindex="0" aria-label="Open fullscreen viewer"></div><button class="gal-nav" id="prev" style="left:0" aria-label="Previous photo">‹</button><button class="gal-nav" id="next" style="right:0" aria-label="Next photo">›</button></div><div class="thumbs" id="thumbs"></div>
+<div style="position:relative"><span style="display:none"></span></div></div>
+<aside class="side"><h1 id="vTitle" style="font-size:clamp(2rem,4vw,3rem)"></h1><div class="price" id="vPrice"></div><div class="kv" id="kv"></div>
+<div class="btns"><button class="btn" id="vFav">Save vehicle</button><button class="btn ghost" id="vCmp">Compare</button><button class="btn ghost" data-open="inqM" data-title="Contact dealer">Contact dealer</button><button class="btn ghost" data-open="inqM" data-title="Request test drive">Request test drive</button></div></aside></div>
+<nav class="subnav" aria-label="Sections"><a href="#s-desc">Description</a><a href="#s-spec">Specifications</a><a href="#s-feat">Features</a><a href="#s-safe">Safety</a><a href="#s-hist">Service history</a><a href="#s-fin">Financing</a><a href="#s-dealer">Dealer</a><a href="#s-sim">Similar</a></nav>
+<section class="vs" id="s-desc"><h2>Description</h2><p class="lead" id="desc"></p></section>
+<section class="vs" id="s-spec"><h2>Specifications</h2><div class="kv" id="specs"></div></section>
+<section class="vs" id="s-feat"><h2>Features</h2><ul class="ul" id="feats"></ul></section>
+<section class="vs" id="s-safe"><h2>Safety</h2><ul class="ul" id="safety"></ul></section>
+<section class="vs" id="s-hist"><h2>Service history</h2><ul class="tl" id="history"></ul></section>
+<section class="vs" id="s-fin"><h2>Financing estimate</h2><div class="res"><div class="fg"><label class="l" for="fdp">Down payment <b id="fdpv"></b></label><input class="range" id="fdp" type="range" min="0" max="50" value="20"></div><div class="fg"><label class="l" for="fmo">Term <b id="fmov"></b></label><input class="range" id="fmo" type="range" min="12" max="84" step="12" value="60"></div><div class="price" id="fres"></div><p class="lead">Estimated at 7.5% APR. <a href="finance.html" id="fLink" style="color:var(--red2)">Open full calculator</a></p></div></section>
+<section class="vs" id="s-dealer"><h2>Dealer information</h2><div class="cols"><div class="card"><h3>AUTOHUB Premium Tbilisi</h3><p>Rustaveli Ave 12, Tbilisi<br>Mon–Sat 10:00–19:00<br>+995 32 200 00 00</p></div><div class="card"><h3>Rated 4.9 / 5</h3><p>Verified dealer with 1,200+ completed sales.</p></div></div></section>
+<section class="vs" id="s-sim" style="border:0"><h2>Similar vehicles</h2><div class="grid" id="similar"></div></section></div></main>
+<footer id="footer"></footer>
+<div class="modal" id="inqM" role="dialog" aria-modal="true" aria-labelledby="mTitle" aria-hidden="true"><div class="mbox"><button class="mx" data-close aria-label="Close">×</button><h3 id="mTitle"></h3><p class="lead" id="mSub" style="margin-bottom:18px"></p>
+<form id="inq" novalidate><div class="fg"><label class="l" for="n1">Name</label><input id="n1" required autocomplete="name"></div><div class="fg"><label class="l" for="e1">Email</label><input id="e1" type="email" required autocomplete="email"></div><div class="fg"><label class="l" for="p1">Phone</label><input id="p1" type="tel" data-phone required autocomplete="tel"></div><div class="fg" id="dateRow" hidden><label class="l" for="date">Preferred date</label><input id="date" type="date"></div><div class="fg"><label class="l" for="msg">Message</label><textarea id="msg" rows="3"></textarea></div><button class="btn" style="width:100%">Send request</button></form>
+<div id="mDone" hidden><h3>Request sent</h3><p class="lead" style="margin:10px 0 20px">The dealer will contact you within one business day.</p><button class="btn ghost" data-close>Close</button></div></div></div>
+<div class="modal viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true"><div class="mbox"><button class="mx" data-close aria-label="Close viewer" style="z-index:2;background:#000a">×</button><img id="viewerImg" alt="Full size vehicle photo"><div style="position:absolute;inset:auto 0 14px;display:flex;justify-content:center;gap:10px"><button class="ico-btn" id="vPrev" style="background:#000a" aria-label="Previous">‹</button><button class="ico-btn" id="vNext" style="background:#000a" aria-label="Next">›</button></div></div></div>
+<script src="js/vehicles.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vehicle.js"></script>
+</body>
+</html>

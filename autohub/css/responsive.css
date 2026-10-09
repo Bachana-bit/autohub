@@ -1,0 +1,18 @@
+@media (min-width:1025px){.hero-g{grid-template-columns:minmax(0,640px)}}
+@media (max-width:1024px){
+.nav,.hdr .hide-m{display:none}.burger{display:block}
+.hero-car{position:relative;right:auto;bottom:auto;width:110%;margin:10px -5% 0;order:3}.hero{align-items:flex-start;padding-bottom:80px}
+.inv{grid-template-columns:minmax(0,1fr)}
+.filters{position:fixed;inset:0;z-index:200;max-height:none;border:0;padding:70px 20px 100px;transform:translateY(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);visibility:hidden}.filters.open{transform:none;visibility:visible}
+.fbtn{display:inline-flex}.fclose{display:grid;position:absolute;right:10px;top:10px;width:44px;height:44px;font-size:1.8rem;place-items:center}
+.fapply{display:flex;position:fixed;left:0;right:0;bottom:0;padding:14px 20px;background:var(--bg2);border-top:1px solid var(--line)}.fapply .btn{width:100%}
+.vgrid{grid-template-columns:minmax(0,1fr)}.side{position:static}
+.fin{grid-template-columns:minmax(0,1fr)}.ftr-g{grid-template-columns:1fr 1fr}.cursor,.spot{display:none}}
+@media (max-width:640px){
+:root{--hh:64px}.wrap{width:calc(100% - 32px)}
+.list .vc{flex-direction:column}.list .vc-img{width:100%;min-height:0;aspect-ratio:16/10}
+.cmp-pick{grid-template-columns:1fr}.ftr-g{grid-template-columns:1fr}.row2{grid-template-columns:1fr}
+.thumbs{grid-template-columns:repeat(4,1fr);gap:6px}.kv{grid-template-columns:1fr}
+.btn{width:100%}.hero-btns .btn{flex:1 1 100%}.sbtns .btn{width:auto}.vc-act .btn{width:auto}
+.topbar select{flex:1}th{width:120px}}
+@media (hover:none){.cursor{display:none}}

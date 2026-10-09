@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finance — AUTOHUB</title>
+<meta name="description" content="Car loan calculator.">
+<meta name="theme-color" content="#0e0f11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="header"></header>
+<section class="pagehead"><div class="wrap"><h1 style="font-size:clamp(2.6rem,7vw,5rem)">Financing</h1><p class="lead" style="margin-top:14px">Estimate your monthly payment instantly.</p></div></section><main id="main"><div class="wrap"><div class="fin"><form id="calc" class="res" onsubmit="return false"><h3>Your loan</h3><div class="fg" style="margin-top:20px"><label class="l" for="price">Vehicle price ($)</label><input id="price" type="number" min="1000" step="500" value="45000"></div><div class="fg"><label class="l" for="down">Down payment ($)</label><input id="down" type="number" min="0" step="500" value="9000"></div>
+<div class="fg"><label class="l" for="term">Loan duration: <b id="termV"></b></label><input class="range" id="term" type="range" min="12" max="84" step="6" value="60"></div><div class="fg"><label class="l" for="rate">Interest rate: <b id="rateV"></b></label><input class="range" id="rate" type="range" min="0" max="20" step="0.1" value="6.9"></div></form>
+<div class="res"><div class="donut" id="donut"><div class="donut-c" id="dm"></div></div><p style="text-align:center;color:var(--mut);font-size:.8rem">Grey: down payment · Red: principal · White: interest</p><div class="rows"><div><span>Loan amount</span><b id="loan"></b></div><div><span>Monthly payment</span><b id="monthly"></b></div><div><span>Total interest</span><b id="interest"></b></div><div><span>Total repayment</span><b id="total"></b></div></div><button class="btn" id="apply" style="width:100%;margin-top:24px">Get financing</button></div></div>
+<section class="sec" style="padding-top:20px"><h2 style="margin-bottom:24px">How financing works</h2><div class="steps-i"><div><h3>1. Estimate</h3><p class="lead">Set price, down payment and term to see your payment.</p></div><div><h3>2. Apply</h3><p class="lead">Send a short request. No credit check at this stage.</p></div><div><h3>3. Approval</h3><p class="lead">A partner bank replies within one business day.</p></div><div><h3>4. Drive</h3><p class="lead">Sign, pay the down payment and collect your car.</p></div></div></section></div></main>
+<div class="modal" id="fm" role="dialog" aria-modal="true" aria-labelledby="fmt" aria-hidden="true"><div class="mbox"><button class="mx" data-close aria-label="Close">×</button><h3 id="fmt" style="margin-bottom:16px">Get financing</h3><form id="fform" novalidate><div class="fg"><label class="l" for="fn">Name</label><input id="fn" required></div><div class="fg"><label class="l" for="fe">Email</label><input id="fe" type="email" required></div><div class="fg"><label class="l" for="fp">Phone</label><input id="fp" data-phone required></div><button class="btn" style="width:100%">Send application</button></form><div id="fdone" hidden><h3>Application received</h3><p class="lead" style="margin:10px 0 20px">We will reply within one business day.</p><button class="btn ghost" data-close>Close</button></div></div></div>
+<footer id="footer"></footer>
+
+<script src="js/vehicles.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/finance.js"></script>
+</body>
+</html>

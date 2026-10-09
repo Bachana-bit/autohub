@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell your car — AUTOHUB</title>
+<meta name="description" content="Get a free estimate for your car.">
+<meta name="theme-color" content="#0e0f11">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header id="header"></header>
+<section class="pagehead"><div class="wrap"><h1 style="font-size:clamp(2.6rem,7vw,5rem)">Sell your car</h1><p class="lead" style="margin-top:14px">Four quick steps to your free estimate.</p></div></section><main id="main"><div class="wrap"><div class="sellbox" id="wiz"><div class="prog" aria-hidden="true"><i></i><i></i><i></i><i></i></div><p id="stepL" style="color:var(--mut);margin-bottom:16px" aria-live="polite"></p>
+<div class="step"><h2 style="margin-bottom:20px">Vehicle information</h2><div class="fg"><label class="l" for="brandS">Brand</label><select id="brandS" required></select></div><div class="fg"><label class="l" for="modelS">Model</label><input id="modelS" required></div><div class="row2"><div class="fg"><label class="l" for="yearS">Year</label><input id="yearS" type="number" min="1990" required></div><div class="fg"><label class="l" for="kmS">Mileage (km)</label><input id="kmS" type="number" min="0" max="999999" required></div></div></div>
+<div class="step"><h2 style="margin-bottom:20px">Condition</h2><div class="fg"><label class="l" for="ext">Exterior</label><select id="ext"><option value="5">Excellent</option><option value="4" selected>Good</option><option value="3">Fair</option><option value="2">Poor</option></select></div><div class="fg"><label class="l" for="int">Interior</label><select id="int"><option value="5">Excellent</option><option value="4" selected>Good</option><option value="3">Fair</option><option value="2">Poor</option></select></div><div class="fg"><label class="l" for="mech">Mechanical condition</label><select id="mech"><option value="5">Excellent</option><option value="4" selected>Good</option><option value="3">Fair</option><option value="2">Needs repair</option></select></div>
+<fieldset style="border:0"><legend class="l" style="font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)">Accident history</legend><label style="display:block;padding:6px 0"><input type="radio" name="acc" value="no" style="width:auto"> No accidents</label><label style="display:block;padding:6px 0"><input type="radio" name="acc" value="yes" style="width:auto"> Previous accident</label><div class="msg-err" id="accErr"></div></fieldset></div>
+<div class="step"><h2 style="margin-bottom:20px">Photos</h2><label class="drop" for="photos">Click to add up to 8 photos<input id="photos" type="file" accept="image/*" multiple style="position:absolute;opacity:0;width:1px;height:1px"></label><div class="msg-err" id="phErr"></div><div class="prev" id="prev"></div></div>
+<div class="step"><h2 style="margin-bottom:20px">Contact information</h2><div class="fg"><label class="l" for="sn">Name</label><input id="sn" required autocomplete="name"></div><div class="fg"><label class="l" for="sp">Phone</label><input id="sp" data-phone required autocomplete="tel"></div><div class="fg"><label class="l" for="se">Email</label><input id="se" type="email" required autocomplete="email"></div></div>
+<div class="sbtns"><button class="btn ghost" id="prevB" type="button">Back</button><button class="btn" id="nextB" type="button">Continue</button></div></div>
+<div class="sellbox" id="doneS" hidden style="text-align:center"><h2>Your estimate</h2><div class="price" id="estV" style="font-size:clamp(2rem,7vw,3.4rem);margin:16px 0"></div><p class="lead" style="margin:0 auto 24px">A specialist will call you to confirm the offer after a quick inspection.</p><a class="btn" href="inventory.html">Browse inventory</a></div></div></main>
+<footer id="footer"></footer>
+
+<script src="js/vehicles.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sell.js"></script>
+</body>
+</html>
